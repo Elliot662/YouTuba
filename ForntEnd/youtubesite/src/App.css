@@ -1,9 +1,13 @@
 body{
-  background-color:snow;
+  background-color:#F1F0FF;
 }
 
 #header{
   background-color: blueviolet;
+  padding: 1px;
+  text-align: center;
+  top: 0;
+  width: auto;
 }
 
 h1{
@@ -25,11 +29,14 @@ h1{
   text-align: center;
 }
 
+.bookmarked-videos{
+  border: solid black 1px;
+}
+
 .footer{
   background-color: blueviolet;
   padding: 1px;
   text-align: center;
-  position: fixed;
   bottom: 0;
-  width: 100%;
+  width: auto;
 }

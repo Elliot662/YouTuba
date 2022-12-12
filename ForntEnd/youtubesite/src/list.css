@@ -44,10 +44,16 @@
 
 .modal-title{
     margin: 0;
+    color: #F1F0FF;
 }
 
 .modal-body{
     padding: 10px;
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
+
+    width: 500px;
+    height: 500px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
 }
