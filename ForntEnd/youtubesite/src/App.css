@@ -1,0 +1,35 @@
+body{
+  background-color:snow;
+}
+
+#header{
+  background-color: blueviolet;
+}
+
+h1{
+  background-color: blueviolet;
+  color: #F1F0FF;
+  padding-right: 10px;
+  text-align: left;
+}
+
+.center{
+  text-align: center;
+}
+
+.watchLater{
+  float: right;
+}
+
+.main{
+  text-align: center;
+}
+
+.footer{
+  background-color: blueviolet;
+  padding: 1px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
