@@ -7,22 +7,27 @@ body{
   padding: 1px;
   text-align: center;
   top: 0;
-  width: auto;
+  width: 99.85%;
+  clear: both;
+  display: table;
 }
 
 h1{
   background-color: blueviolet;
   color: #F1F0FF;
-  padding-right: 10px;
-  text-align: left;
+  padding-left: 15px;
+  float: left;
+  transform: translateY(-10%);
 }
 
-.center{
-  text-align: center;
+.middle{
+  float: center;
+  transform: translateY(150%);
 }
 
 .watchLater{
   float: right;
+  transform: translateY(150%);
 }
 
 .main{

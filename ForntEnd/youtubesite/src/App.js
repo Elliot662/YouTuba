@@ -51,12 +51,12 @@ const App = () => {
       <div id='header'>
         <h1 id='title'>YouTuba</h1>
         <input
-          id='searchBar'
+          className='middle'
           type="text"
           value={userInput}
           onChange={(e) => setUserInput(e.target.value)}
         />
-        <button onClick={theApi} className="right">Search</button>
+        <button onClick={theApi} className="middle">Search</button>
         <button className="watchLater" onClick={() => setShow(true)}>Bookmarked videos</button>
       </div>
       {info.items.map((videos) => (
