@@ -1,6 +1,6 @@
 require("dotenv").config()
 const express = require("express")
-const routes = require("./routes/videos")
+const bookmarkedRoutes = require("./routes/bookmarked")
 const app = express()
 
 app.use((req, res, next) => {
@@ -8,7 +8,7 @@ app.use((req, res, next) => {
     next()
 })
 
-app.use("/api/videos", routes)
+app.use("/api/bookmarked", bookmarkedRoutes)
 
 app.listen(process.env.PORT, () => {
     console.log(`Listening on port ${process.env.PORT}`)
