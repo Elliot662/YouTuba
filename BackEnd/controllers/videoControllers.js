@@ -1,3 +1,4 @@
+const { default: mongoose } = require("mongoose")
 const Video = require("../models/videos")
 
 const getFromBookmarked = async (req, res) => {
@@ -17,9 +18,24 @@ const addToBookmarked = async (req, res) => {
     }
 }
 
+const removeBookmarked = async (req, res) => {
+    const { id } = req.params
 
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+        return res.status(404).json({error: "Video not found"})
+    }
+
+    const video = await Video.findOneAndDelete({_id: id})
+
+    if(!video){
+        return res.status(404).json({error: "Video not found"})
+    }
+
+    res.status(200).json(video)
+}
 
 module.exports = {
     addToBookmarked,
-    getFromBookmarked
+    getFromBookmarked,
+    removeBookmarked
 }
