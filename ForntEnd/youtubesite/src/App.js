@@ -2,6 +2,7 @@ import './App.css';
 import { useState, useEffect } from "react";
 import HomePage from './HomePage';
 import Modal from "./list";
+import Bookmark from './BookmarkedList';
 
 const App = () => {
   const [error, setError] = useState(null)
@@ -63,15 +64,7 @@ const App = () => {
         <div><HomePage info={videos} handleWatchLater={handleWatchLater} /></div>
       ))}
       <Modal onClose={() => setShow(false)} show={show}>
-        {watchLater.map((item) => {
-          return (
-            <div className='bookmarked-videos'>
-              <p>{item.snippet.title}</p>
-              <img src={item.snippet.thumbnails.medium.url} />
-              <button onClick={removeHandler}>Remove</button>
-            </div>
-          )
-        })}
+        <Bookmark />
       </Modal>
       <br></br>
       <div className='footer'>
