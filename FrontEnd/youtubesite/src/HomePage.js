@@ -3,7 +3,7 @@ import "./HomePage.css"
 
 const HomePage = ({info, handleWatchLater}) => {
     return(
-        <div class="videos">
+        <div className="videos">
             <h3>{info.snippet.title}</h3>
             <img src={info.snippet.thumbnails.medium.url}/>
             <h6>{info.snippet.description}</h6>

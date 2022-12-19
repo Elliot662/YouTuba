@@ -60,8 +60,8 @@ const App = () => {
         <button onClick={theApi} className="middle">Search</button>
         <button className="watchLater" onClick={() => setShow(true)}>Bookmarked videos</button>
       </div>
-      {info.items.map((videos) => (
-        <div><HomePage info={videos} handleWatchLater={handleWatchLater} /></div>
+      {info.items.map((videos, index) => (
+        <div key={index}><HomePage info={videos} handleWatchLater={handleWatchLater} /></div>
       ))}
       <Modal onClose={() => setShow(false)} show={show}>
         <Bookmark />
