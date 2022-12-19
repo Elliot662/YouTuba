@@ -7,7 +7,8 @@ const VideoInfo = ({item}) => {
       <div className='bookmarked-videos'>
         <p>{item.title}</p>
         <img src={item.imgUrl} />
-        {/* <button onClick={removeHandler}>Remove</button> */}
+        <br />
+        <button>Remove</button>
       </div>
     )
 }
