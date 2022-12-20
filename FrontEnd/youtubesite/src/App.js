@@ -9,7 +9,6 @@ const App = () => {
   const [info, setInfo] = useState("")
   const [userInput, setUserInput] = useState("MrBeast")
   const [show, setShow] = useState(false)
-  const [watchLater, setWatchLater] = useState([])
 
   const theApi = async () => {
     try {
@@ -23,18 +22,6 @@ const App = () => {
       setError("did not fetch")
       console.log(error.message)
     }
-  }
-
-  const handleWatchLater = (item) => {
-    watchLater.find(watchLaterItem => watchLaterItem.id.videoId === item.id.videoId) == undefined ?
-      setWatchLater([...watchLater, item]) :
-      console.log("video already in watch later")
-  }
-
-  const removeHandler = (index) => {
-    let newArr = [...watchLater]
-    newArr.splice(index, 1)
-    setWatchLater(newArr)
   }
 
   useEffect(() => {
@@ -61,7 +48,7 @@ const App = () => {
         <button className="watchLater" onClick={() => setShow(true)}>Bookmarked videos</button>
       </div>
       {info.items.map((videos, index) => (
-        <div key={index}><HomePage info={videos} handleWatchLater={handleWatchLater} /></div>
+        <div key={index}><HomePage info={videos}/></div>
       ))}
       <Modal onClose={() => setShow(false)} show={show}>
         <Bookmark />
