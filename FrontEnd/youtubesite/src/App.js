@@ -12,7 +12,7 @@ const App = () => {
 
   const theApi = async () => {
     try {
-      let response = await fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=3&order=relevance&q=${userInput}&safeSearch=strict&type=video&key=${process.env.REACT_APP_KEY}`)
+      let response = await fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=3&order=relevance&q=${userInput}&safeSearch=strict&type=video&key=${process.env.REACT_APP_KEY2}`)
       if (!response.ok) {
         throw new Error(response.statusText)
       }
@@ -38,13 +38,13 @@ const App = () => {
     <div className="main">
       <div id='header'>
         <h1 id='title'>YouTuba</h1>
-        <input
+        {/* <input
           className='middle'
           type="text"
           value={userInput}
           onChange={(e) => setUserInput(e.target.value)}
         />
-        <button onClick={theApi} className="middle">Search</button>
+        <button onClick={theApi} className="middle">Search</button> */}
         <button className="watchLater" onClick={() => setShow(true)}>Bookmarked videos</button>
       </div>
       {info.items.map((videos, index) => (
